@@ -1,0 +1,69 @@
+﻿HASIL PRAKTIK RET503 - DETEKSI PITA DENGAN YOLO
+
+NIM: 4222401029
+Kelas objek: pita_biru, pita_putih, pita_hijau
+
+1. DATASET
+Jumlah gambar: 150
+Training: 105 gambar
+Validasi: 30 gambar
+Test: 15 gambar
+
+2. KONFIGURASI EKSPERIMEN
+E1:
+Model: YOLO26n pretrained
+Batch: 8
+Image size: 640
+Epoch terbaik validasi: 34
+
+E3:
+Model: YOLO26n pretrained
+Batch: 4
+Image size: 640
+Epoch terbaik validasi: 29
+
+3. HASIL VALIDASI
+
+E1:
+Precision: 95.46%
+Recall: 96.67%
+mAP50: 96.21%
+mAP50-95: 61.40%
+
+E3:
+Precision: 95.71%
+Recall: 96.67%
+mAP50: 95.84%
+mAP50-95: 62.13%
+
+4. HASIL EVALUASI TEST
+
+E1:
+Precision: 98.45%
+Recall: 100.00%
+mAP50: 99.50%
+mAP50-95: 60.45%
+
+E3:
+Precision: 98.20%
+Recall: 93.30%
+mAP50: 98.40%
+mAP50-95: 60.10%
+
+5. ANALISIS
+E3 memiliki mAP50-95 validasi sedikit lebih tinggi daripada E1.
+Namun, pada data test, E1 memperoleh nilai lebih tinggi untuk
+precision, recall, mAP50, dan mAP50-95.
+
+Berdasarkan hasil test yang tersedia, E1 dipilih sebagai kandidat
+model utama. Kesimpulan ini masih bersifat awal karena data test
+hanya terdiri dari 15 gambar.
+
+6. CATATAN
+E1 menggunakan batch 8, sedangkan E3 menggunakan batch 4.
+Dataset test berisi lima gambar untuk setiap kelas.
+Pengujian tambahan diperlukan untuk mengevaluasi model pada
+variasi latar belakang, pencahayaan, dan posisi pita.
+
+File hasil training, grafik, confusion matrix, dan bobot model
+tersimpan di folder runs/pita.

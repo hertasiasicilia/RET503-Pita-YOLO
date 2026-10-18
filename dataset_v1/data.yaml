@@ -1,0 +1,9 @@
+path: dataset_v1
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: pita_biru
+  1: pita_putih
+  2: pita_hijau

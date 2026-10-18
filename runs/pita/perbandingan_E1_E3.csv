@@ -1,0 +1,3 @@
+﻿Eksperimen,Batch,Epoch terbaik,Precision,Recall,mAP50,mAP50-95
+E1,8,34,0.95465,0.96667,0.96208,0.61404
+E3,4,29,0.9571,0.96667,0.95837,0.62127
